@@ -1,0 +1,30 @@
+# ─────────────────────────────────────────────────────────────
+#  Sri Asha Forgings — Cloudflare Pages Redirects
+#  Place this file in the ROOT of your published directory.
+#  Format: [source]  [destination]  [status_code]
+# ─────────────────────────────────────────────────────────────
+
+# 1. Force non-www → www (canonical domain)
+#    Cloudflare handles domain-level redirects in the Dashboard
+#    but you can also catch /path level here.
+
+# 2. Redirect bare index files → clean root
+/index.html         /               301
+/index-new.html     /               301
+
+# 3. Common typos / old URL patterns
+/home               /               301
+/home.html          /               301
+/index-new          /               301
+
+# 4. Normalize page URLs (handle missing .html extension)
+/about              /about.html     301
+/faqs               /Faqs.html      301
+/faq                /Faqs.html      301
+/privacy            /privacypolicy.html  301
+/privacy-policy     /privacypolicy.html  301
+/terms              /Terms.html     301
+/terms-of-service   /Terms.html     301
+
+# 5. 404 fallback — serve custom 404 page
+/*                  /404.html       404

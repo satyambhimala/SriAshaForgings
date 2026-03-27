@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths (add more if needed)
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Crawl delay for bots (optional, Googlebot ignores this)
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://www.sriashaforgings.com/sitemap.xml
